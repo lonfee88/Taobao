@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B1DA4C0198A6E8600C3102D /* account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B1198A6E8600C3102D /* account@2x.png */; };
+		9B1DA4C1198A6E8600C3102D /* account_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B2198A6E8600C3102D /* account_on@2x.png */; };
+		9B1DA4C2198A6E8600C3102D /* cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B3198A6E8600C3102D /* cart@2x.png */; };
+		9B1DA4C3198A6E8600C3102D /* cart_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B4198A6E8600C3102D /* cart_on@2x.png */; };
+		9B1DA4C4198A6E8600C3102D /* discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B5198A6E8600C3102D /* discover@2x.png */; };
+		9B1DA4C5198A6E8600C3102D /* discover_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B6198A6E8600C3102D /* discover_on@2x.png */; };
+		9B1DA4C6198A6E8600C3102D /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B7198A6E8600C3102D /* home@2x.png */; };
+		9B1DA4C7198A6E8600C3102D /* home_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B8198A6E8600C3102D /* home_on@2x.png */; };
+		9B1DA4C8198A6E8600C3102D /* wei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B9198A6E8600C3102D /* wei@2x.png */; };
+		9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */; };
+		9BC86A38198A634B001C24DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A37198A634B001C24DE /* Foundation.framework */; };
+		9BC86A3A198A634B001C24DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A39198A634B001C24DE /* CoreGraphics.framework */; };
+		9BC86A3C198A634B001C24DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A3B198A634B001C24DE /* UIKit.framework */; };
+		9BC86A42198A634B001C24DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC86A40198A634B001C24DE /* InfoPlist.strings */; };
+		9BC86A44198A634B001C24DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A43198A634B001C24DE /* main.m */; };
+		9BC86A48198A634B001C24DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A47198A634B001C24DE /* AppDelegate.m */; };
+		9BC86A4A198A634B001C24DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC86A49198A634B001C24DE /* Images.xcassets */; };
+		9BC86A51198A634C001C24DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A50198A634C001C24DE /* XCTest.framework */; };
+		9BC86A52198A634C001C24DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A37198A634B001C24DE /* Foundation.framework */; };
+		9BC86A53198A634C001C24DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A3B198A634B001C24DE /* UIKit.framework */; };
+		9BC86A5B198A634C001C24DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC86A59198A634C001C24DE /* InfoPlist.strings */; };
+		9BC86A5D198A634C001C24DE /* TaobaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A5C198A634C001C24DE /* TaobaoTests.m */; };
+		9BC86A68198A641D001C24DE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A67198A641D001C24DE /* HomeViewController.m */; };
+		9BC86A6B198A6435001C24DE /* WeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A6A198A6435001C24DE /* WeiViewController.m */; };
+		9BC86A6E198A645C001C24DE /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A6D198A645C001C24DE /* DiscoverViewController.m */; };
+		9BC86A71198A6499001C24DE /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A70198A6499001C24DE /* CartViewController.m */; };
+		9BC86A78198A6AB5001C24DE /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC86A77198A6AB5001C24DE /* AccountViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BC86A54198A634C001C24DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BC86A2C198A634B001C24DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BC86A33198A634B001C24DE;
+			remoteInfo = Taobao;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B1DA4B1198A6E8600C3102D /* account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B2198A6E8600C3102D /* account_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account_on@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B3198A6E8600C3102D /* cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B4198A6E8600C3102D /* cart_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_on@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B5198A6E8600C3102D /* discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discover@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B6198A6E8600C3102D /* discover_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discover_on@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B7198A6E8600C3102D /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B8198A6E8600C3102D /* home_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_on@2x.png"; sourceTree = "<group>"; };
+		9B1DA4B9198A6E8600C3102D /* wei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wei@2x.png"; sourceTree = "<group>"; };
+		9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wei_on@2x.png"; sourceTree = "<group>"; };
+		9BC86A34198A634B001C24DE /* Taobao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taobao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC86A37198A634B001C24DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9BC86A39198A634B001C24DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9BC86A3B198A634B001C24DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9BC86A3F198A634B001C24DE /* Taobao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Taobao-Info.plist"; sourceTree = "<group>"; };
+		9BC86A41198A634B001C24DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BC86A43198A634B001C24DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BC86A45198A634B001C24DE /* Taobao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Taobao-Prefix.pch"; sourceTree = "<group>"; };
+		9BC86A46198A634B001C24DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BC86A47198A634B001C24DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BC86A49198A634B001C24DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9BC86A4F198A634C001C24DE /* TaobaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaobaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC86A50198A634C001C24DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9BC86A58198A634C001C24DE /* TaobaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TaobaoTests-Info.plist"; sourceTree = "<group>"; };
+		9BC86A5A198A634C001C24DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BC86A5C198A634C001C24DE /* TaobaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaobaoTests.m; sourceTree = "<group>"; };
+		9BC86A66198A641D001C24DE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9BC86A67198A641D001C24DE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9BC86A69198A6435001C24DE /* WeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiViewController.h; sourceTree = "<group>"; };
+		9BC86A6A198A6435001C24DE /* WeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiViewController.m; sourceTree = "<group>"; };
+		9BC86A6C198A645C001C24DE /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		9BC86A6D198A645C001C24DE /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		9BC86A6F198A6499001C24DE /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		9BC86A70198A6499001C24DE /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		9BC86A76198A6AB5001C24DE /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		9BC86A77198A6AB5001C24DE /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BC86A31198A634B001C24DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC86A3A198A634B001C24DE /* CoreGraphics.framework in Frameworks */,
+				9BC86A3C198A634B001C24DE /* UIKit.framework in Frameworks */,
+				9BC86A38198A634B001C24DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC86A4C198A634C001C24DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC86A51198A634C001C24DE /* XCTest.framework in Frameworks */,
+				9BC86A53198A634C001C24DE /* UIKit.framework in Frameworks */,
+				9BC86A52198A634C001C24DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B1DA4AA198A6E8600C3102D /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				9B1DA4B1198A6E8600C3102D /* account@2x.png */,
+				9B1DA4B2198A6E8600C3102D /* account_on@2x.png */,
+				9B1DA4B3198A6E8600C3102D /* cart@2x.png */,
+				9B1DA4B4198A6E8600C3102D /* cart_on@2x.png */,
+				9B1DA4B5198A6E8600C3102D /* discover@2x.png */,
+				9B1DA4B6198A6E8600C3102D /* discover_on@2x.png */,
+				9B1DA4B7198A6E8600C3102D /* home@2x.png */,
+				9B1DA4B8198A6E8600C3102D /* home_on@2x.png */,
+				9B1DA4B9198A6E8600C3102D /* wei@2x.png */,
+				9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */,
+			);
+			path = resource;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BC86A2B198A634B001C24DE = {
+			isa = PBXGroup;
+			children = (
+				9BC86A3D198A634B001C24DE /* Taobao */,
+				9BC86A56198A634C001C24DE /* TaobaoTests */,
+				9BC86A36198A634B001C24DE /* Frameworks */,
+				9BC86A35198A634B001C24DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BC86A35198A634B001C24DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BC86A34198A634B001C24DE /* Taobao.app */,
+				9BC86A4F198A634C001C24DE /* TaobaoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BC86A36198A634B001C24DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BC86A37198A634B001C24DE /* Foundation.framework */,
+				9BC86A39198A634B001C24DE /* CoreGraphics.framework */,
+				9BC86A3B198A634B001C24DE /* UIKit.framework */,
+				9BC86A50198A634C001C24DE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BC86A3D198A634B001C24DE /* Taobao */ = {
+			isa = PBXGroup;
+			children = (
+				9B1DA4AA198A6E8600C3102D /* resource */,
+				9BC86A46198A634B001C24DE /* AppDelegate.h */,
+				9BC86A47198A634B001C24DE /* AppDelegate.m */,
+				9BC86A49198A634B001C24DE /* Images.xcassets */,
+				9BC86A3E198A634B001C24DE /* Supporting Files */,
+				9BC86A66198A641D001C24DE /* HomeViewController.h */,
+				9BC86A67198A641D001C24DE /* HomeViewController.m */,
+				9BC86A69198A6435001C24DE /* WeiViewController.h */,
+				9BC86A6A198A6435001C24DE /* WeiViewController.m */,
+				9BC86A6C198A645C001C24DE /* DiscoverViewController.h */,
+				9BC86A6D198A645C001C24DE /* DiscoverViewController.m */,
+				9BC86A6F198A6499001C24DE /* CartViewController.h */,
+				9BC86A70198A6499001C24DE /* CartViewController.m */,
+				9BC86A76198A6AB5001C24DE /* AccountViewController.h */,
+				9BC86A77198A6AB5001C24DE /* AccountViewController.m */,
+			);
+			path = Taobao;
+			sourceTree = "<group>";
+		};
+		9BC86A3E198A634B001C24DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC86A3F198A634B001C24DE /* Taobao-Info.plist */,
+				9BC86A40198A634B001C24DE /* InfoPlist.strings */,
+				9BC86A43198A634B001C24DE /* main.m */,
+				9BC86A45198A634B001C24DE /* Taobao-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BC86A56198A634C001C24DE /* TaobaoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BC86A5C198A634C001C24DE /* TaobaoTests.m */,
+				9BC86A57198A634C001C24DE /* Supporting Files */,
+			);
+			path = TaobaoTests;
+			sourceTree = "<group>";
+		};
+		9BC86A57198A634C001C24DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC86A58198A634C001C24DE /* TaobaoTests-Info.plist */,
+				9BC86A59198A634C001C24DE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BC86A33198A634B001C24DE /* Taobao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BC86A60198A634C001C24DE /* Build configuration list for PBXNativeTarget "Taobao" */;
+			buildPhases = (
+				9BC86A30198A634B001C24DE /* Sources */,
+				9BC86A31198A634B001C24DE /* Frameworks */,
+				9BC86A32198A634B001C24DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Taobao;
+			productName = Taobao;
+			productReference = 9BC86A34198A634B001C24DE /* Taobao.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BC86A4E198A634C001C24DE /* TaobaoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BC86A63198A634C001C24DE /* Build configuration list for PBXNativeTarget "TaobaoTests" */;
+			buildPhases = (
+				9BC86A4B198A634C001C24DE /* Sources */,
+				9BC86A4C198A634C001C24DE /* Frameworks */,
+				9BC86A4D198A634C001C24DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BC86A55198A634C001C24DE /* PBXTargetDependency */,
+			);
+			name = TaobaoTests;
+			productName = TaobaoTests;
+			productReference = 9BC86A4F198A634C001C24DE /* TaobaoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BC86A2C198A634B001C24DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = longfei;
+				TargetAttributes = {
+					9BC86A4E198A634C001C24DE = {
+						TestTargetID = 9BC86A33198A634B001C24DE;
+					};
+				};
+			};
+			buildConfigurationList = 9BC86A2F198A634B001C24DE /* Build configuration list for PBXProject "Taobao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9BC86A2B198A634B001C24DE;
+			productRefGroup = 9BC86A35198A634B001C24DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BC86A33198A634B001C24DE /* Taobao */,
+				9BC86A4E198A634C001C24DE /* TaobaoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BC86A32198A634B001C24DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1DA4C0198A6E8600C3102D /* account@2x.png in Resources */,
+				9BC86A42198A634B001C24DE /* InfoPlist.strings in Resources */,
+				9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */,
+				9B1DA4C6198A6E8600C3102D /* home@2x.png in Resources */,
+				9B1DA4C5198A6E8600C3102D /* discover_on@2x.png in Resources */,
+				9BC86A4A198A634B001C24DE /* Images.xcassets in Resources */,
+				9B1DA4C7198A6E8600C3102D /* home_on@2x.png in Resources */,
+				9B1DA4C3198A6E8600C3102D /* cart_on@2x.png in Resources */,
+				9B1DA4C8198A6E8600C3102D /* wei@2x.png in Resources */,
+				9B1DA4C2198A6E8600C3102D /* cart@2x.png in Resources */,
+				9B1DA4C1198A6E8600C3102D /* account_on@2x.png in Resources */,
+				9B1DA4C4198A6E8600C3102D /* discover@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC86A4D198A634C001C24DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC86A5B198A634C001C24DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BC86A30198A634B001C24DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC86A6E198A645C001C24DE /* DiscoverViewController.m in Sources */,
+				9BC86A48198A634B001C24DE /* AppDelegate.m in Sources */,
+				9BC86A78198A6AB5001C24DE /* AccountViewController.m in Sources */,
+				9BC86A44198A634B001C24DE /* main.m in Sources */,
+				9BC86A6B198A6435001C24DE /* WeiViewController.m in Sources */,
+				9BC86A71198A6499001C24DE /* CartViewController.m in Sources */,
+				9BC86A68198A641D001C24DE /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC86A4B198A634C001C24DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC86A5D198A634C001C24DE /* TaobaoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BC86A55198A634C001C24DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BC86A33198A634B001C24DE /* Taobao */;
+			targetProxy = 9BC86A54198A634C001C24DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BC86A40198A634B001C24DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC86A41198A634B001C24DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BC86A59198A634C001C24DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC86A5A198A634C001C24DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BC86A5E198A634C001C24DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BC86A5F198A634C001C24DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BC86A61198A634C001C24DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
+				INFOPLIST_FILE = "Taobao/Taobao-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9BC86A62198A634C001C24DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
+				INFOPLIST_FILE = "Taobao/Taobao-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9BC86A64198A634C001C24DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Taobao.app/Taobao";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TaobaoTests/TaobaoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9BC86A65198A634C001C24DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Taobao.app/Taobao";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
+				INFOPLIST_FILE = "TaobaoTests/TaobaoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BC86A2F198A634B001C24DE /* Build configuration list for PBXProject "Taobao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC86A5E198A634C001C24DE /* Debug */,
+				9BC86A5F198A634C001C24DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BC86A60198A634C001C24DE /* Build configuration list for PBXNativeTarget "Taobao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC86A61198A634C001C24DE /* Debug */,
+				9BC86A62198A634C001C24DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BC86A63198A634C001C24DE /* Build configuration list for PBXNativeTarget "TaobaoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC86A64198A634C001C24DE /* Debug */,
+				9BC86A65198A634C001C24DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BC86A2C198A634B001C24DE /* Project object */;
+}
