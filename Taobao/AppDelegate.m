@@ -18,38 +18,66 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    //添加UITabBarController
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
    
     //首页
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     UINavigationController *homeNavController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     [homeNavController.tabBarItem setTitle:@"首页"];
+    //设置图片
     [homeNavController.tabBarItem setImage:[UIImage imageNamed:@"home"]];
+    //设置选中图片
+    [homeNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"home_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //设置选中文本颜色
+    [homeNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
+    
     //微淘
     WeiViewController *weiViewController = [[WeiViewController alloc] init];
      UINavigationController *weiNavController = [[UINavigationController alloc] initWithRootViewController:weiViewController];
     [weiNavController.tabBarItem setTitle:@"微淘"];
+    //设置图片
     [weiNavController.tabBarItem setImage:[UIImage imageNamed:@"wei"]];
+    //设置选中图片
+    [weiNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"wei_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //设置选中文本颜色
+    [weiNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
+    
     //发现
     DiscoverViewController *discoverViewController = [[DiscoverViewController alloc] init];
     UINavigationController *discoverNavController = [[UINavigationController alloc] initWithRootViewController:discoverViewController];
     [discoverNavController.tabBarItem setTitle:@"微淘"];
+    //设置图片
     [discoverNavController.tabBarItem setImage:[UIImage imageNamed:@"discover"]];
+    //设置选中图片
+    [discoverNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"discover_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //设置选中文本颜色
+    [discoverNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
+    
     //购物车
     CartViewController *cartViewController = [[CartViewController alloc] init];
     UINavigationController *cartNavController = [[UINavigationController alloc] initWithRootViewController:cartViewController];
+    //设置图片
     [cartNavController.tabBarItem setTitle:@"购物车"];
     [cartNavController.tabBarItem setImage:[UIImage imageNamed:@"cart"]];
+    //设置选中图片
+    [cartNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"cart_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //设置选中文本颜色
+    [cartNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
+    
     //我的淘宝
     AccountViewController *accountViewController = [[AccountViewController alloc] init];
     UINavigationController *accountNavController = [[UINavigationController alloc] initWithRootViewController:accountViewController];
     [accountNavController.tabBarItem setTitle:@"我的淘宝"];
+    //设置图片
     [accountNavController.tabBarItem setImage:[UIImage imageNamed:@"account"]];
+    //设置选中图片
+    [accountNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"account_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    //设置选中文本颜色
+    [accountNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
     
     //初始化tabbar
     NSArray *tabBarArray = @[homeNavController,weiNavController, discoverNavController, cartNavController, accountNavController];
+    //添加UITabBarController
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [tabBarController setViewControllers:tabBarArray];
     
     //设置rootViewController
