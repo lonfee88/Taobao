@@ -73,6 +73,8 @@
     [accountNavController.tabBarItem setSelectedImage:[[UIImage imageNamed:@"account_on"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     //设置选中文本颜色
     [accountNavController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateHighlighted];
+    //new
+    [accountNavController.tabBarItem setBadgeValue:@"new"];
     
     //初始化tabbar
     NSArray *tabBarArray = @[homeNavController,weiNavController, discoverNavController, cartNavController, accountNavController];

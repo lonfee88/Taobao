@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"我的淘宝";
+    //添加收藏夹按钮
+    
 }
 
 - (void)didReceiveMemoryWarning
