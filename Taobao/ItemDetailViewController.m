@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置背景色
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     //设置标题
     self.navigationItem.title = @"宝贝详情";
     UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 320, self.navigationController.navigationBar.frame.size.height)];
@@ -37,7 +39,6 @@
     //设置contentSize才能滚动
     self.scroolView.contentSize = CGSizeMake(320*3, 320);
     [self.view addSubview:self.scroolView];
-    
     //加图
     UIImageView *hezi0 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
     hezi0.image = [UIImage imageNamed:@"hezi0.jpg"];
@@ -92,7 +93,6 @@
     addToCart.titleLabel.font = [UIFont systemFontOfSize:16];
     addToCart.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:addToCart];
-    
     [addToCart addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
 }
 

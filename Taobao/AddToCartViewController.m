@@ -27,11 +27,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置背景色
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    //设置title
     self.title = @"加入购物车";
-    UILabel *cartLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width-200)/2, self.view.frame.size.height/2, 200, 20)];
+    //增加label
+    UILabel *cartLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, self.view.frame.size.height/2, 150, 20)];
     cartLabel.text = @"加入购物车成功!";
+    cartLabel.textColor = [UIColor orangeColor];
     [self.view addSubview:cartLabel];
+    //增加"去购物车查看"按钮
+    UIButton *goToCart = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, cartLabel.frame.origin.y-50, 150, 40)];
+    [goToCart setTitle:@"去购物车查看" forState:UIControlStateNormal];
+    [goToCart setBackgroundColor:[UIColor orangeColor]];
+    [goToCart addTarget:self action:@selector(goToCart:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:goToCart];
     
+}
+
+- (void) goToCart:(id)sender{
+    [self.tabBarController setSelectedIndex:3];
 }
 
 - (void)didReceiveMemoryWarning
