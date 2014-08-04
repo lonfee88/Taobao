@@ -76,12 +76,24 @@
 
 - (void)addData:(NSInteger)num{
     for(int i = 0; i < num; ++i){
-        ItemModel *itemModel = [[ItemModel alloc] init];
-        itemModel.imageName = @"hezi11.jpg";
-        itemModel.title = @"天猫魔盒TMB200F 高清电视网络机顶盒 wifi硬盘播放器 智能盒子1s";
-        itemModel.hotText = [NSString stringWithFormat:@"9%d", i];
-        itemModel.price = [NSString stringWithFormat:@"29%d.00", i];
-        [self.dataArray addObject:itemModel];
+//        ItemModel *itemModel = [[ItemModel alloc] init];
+        NSString *imageName = @"hezi11.jpg";
+        NSString *title = @"天猫魔盒TMB200F 高清电视网络机顶盒 wifi硬盘播放器 智能盒子1s";
+        NSString *hotText = [NSString stringWithFormat:@"9%d", i];
+        NSString *price = [NSString stringWithFormat:@"29%d.00", i];
+//        itemModel.itemDictionary = [NSMutableDictionary dictionary];
+//        [itemModel.itemDictionary setObject:imageName forKey:@"imageName"];
+//        [itemModel.itemDictionary setObject:title forKey:@"title"];
+//        [itemModel.itemDictionary setObject:hotText forKey:@"hotText"];
+//        [itemModel.itemDictionary setObject:price forKey:@"price"];
+        
+        NSMutableDictionary *itemDictionary = [NSMutableDictionary dictionary];
+  
+        [itemDictionary setObject:imageName forKey:@"imageName"];
+        [itemDictionary setObject:title forKey:@"title"];
+        [itemDictionary setObject:hotText forKey:@"hotText"];
+        [itemDictionary setObject:price forKey:@"price"];
+        [self.dataArray addObject:itemDictionary];
     }
 }
 
@@ -98,8 +110,9 @@
     //    ItemCell *cell = nil;
     if(!cell){
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ItemCell"];
+        
     }
-    ItemModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    NSMutableDictionary *model = [self.dataArray objectAtIndex:indexPath.row];
     [cell updateCellWithModel:model];
     return cell;
 }
@@ -170,8 +183,8 @@
     
     self.detailViewController = [[ItemDetailViewController alloc] init];
     //把宝贝的标题、价格和人气传到detail页
-    ItemModel *model = [self.dataArray objectAtIndex:[indexPath row]];
-    self.detailViewController.model = model;
+    NSMutableDictionary *itemDictionary = [self.dataArray objectAtIndex:[indexPath row]];
+    self.detailViewController.itemDictionary = itemDictionary;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 

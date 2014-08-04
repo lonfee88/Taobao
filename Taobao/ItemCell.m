@@ -42,11 +42,11 @@
     return self;
 }
 
-- (void)updateCellWithModel:(ItemModel *)model{
-    self.itemImageView.image = [UIImage imageNamed:model.imageName];
-    self.hotLabel.text = [NSString stringWithFormat:@"人气 %@",  model.hotText];
-    self.titleLabel.text = model.title;
-    self.priceLabel.text = [NSString stringWithFormat:@"¥ %@", model.price];
+- (void)updateCellWithModel:(NSMutableDictionary *)itemDictionary{
+    self.itemImageView.image = [UIImage imageNamed:[itemDictionary objectForKey:@"imageName"]];
+    self.hotLabel.text = [NSString stringWithFormat:@"人气 %@",  [itemDictionary objectForKey:@"hotText"]];
+    self.titleLabel.text = [itemDictionary objectForKey:@"title"];
+    self.priceLabel.text = [NSString stringWithFormat:@"¥ %@", [itemDictionary objectForKey:@"price"]];
 }
 
 - (void)awakeFromNib

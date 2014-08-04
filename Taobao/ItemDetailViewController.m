@@ -70,14 +70,14 @@
 -(void)showDetail{
     //添加label
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.scroolView.frame.size.height+20, self.view.frame.size.width, 60)];
-    [titleLabel setText:self.model.title];
+    [titleLabel setText:[self.itemDictionary objectForKey:@"title"]];
     titleLabel.numberOfLines = 0;
     titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
     titleLabel.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:titleLabel];
     //添加价格
     UILabel *priceLabel =[[UILabel alloc] initWithFrame:CGRectMake(0, titleLabel.frame.origin.y + 45, 100, 30)];
-    [priceLabel setText:[NSString stringWithFormat:@"价格:%@", self.model.price]];
+    [priceLabel setText:[NSString stringWithFormat:@"价格:%@", [self.itemDictionary objectForKey:@"price"]]];
     priceLabel.textColor = [UIColor redColor];
     priceLabel.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:priceLabel];
@@ -85,7 +85,7 @@
     UILabel *hotLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, priceLabel.frame.origin.y + 20, 100, 30)];
     hotLabel.textColor = [UIColor darkGrayColor];
     hotLabel.font = [UIFont systemFontOfSize:14];
-    [hotLabel setText:[NSString stringWithFormat:@"人气 %@", self.model.hotText]];
+    [hotLabel setText:[NSString stringWithFormat:@"人气 %@", [self.itemDictionary objectForKey:@"hotText"]]];
     [self.view addSubview:hotLabel];
     //添加加入购物车按钮
     UIButton *addToCart = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110 , priceLabel.frame.origin.y, 100, 40)];
@@ -126,6 +126,7 @@
     [self.scroolView setContentOffset:CGPointMake(320*currentPage, 0) animated:YES];
 }
 
+//加入购物车
 - (void)addToCart:(id)sender{
     AddToCartViewController *addToCartViewController = [[AddToCartViewController alloc] init];
     [self.navigationController pushViewController:addToCartViewController animated:YES];
