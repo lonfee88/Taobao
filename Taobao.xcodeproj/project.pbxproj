@@ -18,6 +18,7 @@
 		9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E413D198D42B0006C0015 /* hezi11.jpg */; };
 		9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4140198D42DC006C0015 /* ItemCell.m */; };
 		9B4A7872198E812B00CC11C7 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */; };
+		9B8B36E2198F39C600F718FF /* AddToCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B36E1198F39C600F718FF /* AddToCartViewController.m */; };
 		9B8F0943198E7ECE00D815AA /* hezi0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F0940198E7ECE00D815AA /* hezi0.jpg */; };
 		9B8F0944198E7ECE00D815AA /* hezi1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F0941198E7ECE00D815AA /* hezi1.jpg */; };
 		9B8F0945198E7ECE00D815AA /* hezi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F0942198E7ECE00D815AA /* hezi2.jpg */; };
@@ -66,6 +67,8 @@
 		9B3E4140198D42DC006C0015 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		9B4A7870198E812B00CC11C7 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		9B8B36E0198F39C600F718FF /* AddToCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartViewController.h; sourceTree = "<group>"; };
+		9B8B36E1198F39C600F718FF /* AddToCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartViewController.m; sourceTree = "<group>"; };
 		9B8F0940198E7ECE00D815AA /* hezi0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi0.jpg; sourceTree = "<group>"; };
 		9B8F0941198E7ECE00D815AA /* hezi1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi1.jpg; sourceTree = "<group>"; };
 		9B8F0942198E7ECE00D815AA /* hezi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi2.jpg; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				9B3E4138198D3775006C0015 /* MyFavoriteViewController.m */,
 				9B4A7870198E812B00CC11C7 /* ItemDetailViewController.h */,
 				9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */,
+				9B8B36E0198F39C600F718FF /* AddToCartViewController.h */,
+				9B8B36E1198F39C600F718FF /* AddToCartViewController.m */,
 				9B3E413A198D42A0006C0015 /* ItemModel.h */,
 				9B3E413B198D42A0006C0015 /* ItemModel.m */,
 				9B3E413F198D42DC006C0015 /* ItemCell.h */,
@@ -347,6 +352,7 @@
 				9B4A7872198E812B00CC11C7 /* ItemDetailViewController.m in Sources */,
 				9BC86A6E198A645C001C24DE /* DiscoverViewController.m in Sources */,
 				9BC86A48198A634B001C24DE /* AppDelegate.m in Sources */,
+				9B8B36E2198F39C600F718FF /* AddToCartViewController.m in Sources */,
 				9B3E4139198D3775006C0015 /* MyFavoriteViewController.m in Sources */,
 				9BC86A78198A6AB5001C24DE /* AccountViewController.m in Sources */,
 				9BC86A44198A634B001C24DE /* main.m in Sources */,

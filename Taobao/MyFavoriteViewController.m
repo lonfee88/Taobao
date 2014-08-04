@@ -169,9 +169,9 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.detailViewController = [[ItemDetailViewController alloc] init];
-    //把宝贝的标题、价格传到detail页
-//    self.detailViewController.model = model;
-    
+    //把宝贝的标题、价格和人气传到detail页
+    ItemModel *model = [self.dataArray objectAtIndex:[indexPath row]];
+    self.detailViewController.model = model;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 

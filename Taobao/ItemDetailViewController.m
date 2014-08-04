@@ -7,6 +7,7 @@
 //
 
 #import "ItemDetailViewController.h"
+#import "AddToCartViewController.h"
 
 @interface ItemDetailViewController ()
 
@@ -27,11 +28,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置标题
+    self.navigationItem.title = @"宝贝详情";
+    UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 320, self.navigationController.navigationBar.frame.size.height)];
+    [self.view addSubview:vi];
     //添加ScroolView
-    self.scroolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, 320, 320)];
-    self.scroolView.backgroundColor = [UIColor blueColor];
+    self.scroolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, 320, 320)];
     //设置contentSize才能滚动
-    self.scroolView.contentSize = CGSizeMake(320*3, 0);
+    self.scroolView.contentSize = CGSizeMake(320*3, 320);
     [self.view addSubview:self.scroolView];
     
     //加图
@@ -49,14 +53,47 @@
     self.scroolView.showsHorizontalScrollIndicator = NO;
     
     //加分页
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake((320-100)/2.0, 350, 100, 40)];
-    self.pageControl.backgroundColor = [UIColor orangeColor];
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake((320-100)/2.0, 320, 100, 40)];
+    self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     self.pageControl.numberOfPages = 3;
     [self.view addSubview:self.pageControl];
     
     //设置delegate，至关重要
     self.scroolView.delegate = self;
+    [self.pageControl addTarget:self action:@selector(pageSelected) forControlEvents:UIControlEventValueChanged];
+    [self showDetail];
+}
 
+//显示标题、价格和人气
+-(void)showDetail{
+    //添加label
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.scroolView.frame.size.height+20, self.view.frame.size.width, 60)];
+    [titleLabel setText:self.model.title];
+    titleLabel.numberOfLines = 0;
+    titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:titleLabel];
+    //添加价格
+    UILabel *priceLabel =[[UILabel alloc] initWithFrame:CGRectMake(0, titleLabel.frame.origin.y + 45, 100, 30)];
+    [priceLabel setText:[NSString stringWithFormat:@"价格:%@", self.model.price]];
+    priceLabel.textColor = [UIColor redColor];
+    priceLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:priceLabel];
+    //添加人气
+    UILabel *hotLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, priceLabel.frame.origin.y + 20, 100, 30)];
+    hotLabel.textColor = [UIColor darkGrayColor];
+    hotLabel.font = [UIFont systemFontOfSize:14];
+    [hotLabel setText:[NSString stringWithFormat:@"人气 %@", self.model.hotText]];
+    [self.view addSubview:hotLabel];
+    //添加加入购物车按钮
+    UIButton *addToCart = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110 , priceLabel.frame.origin.y, 100, 40)];
+    [addToCart setTitle:@"加入购物车" forState:UIControlStateNormal];
+    addToCart.titleLabel.font = [UIFont systemFontOfSize:16];
+    addToCart.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:addToCart];
+    
+    [addToCart addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,13 +101,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void) pageSelected{
-    NSInteger currentPage = self.pageControl.currentPage;
-    NSLog(@"currentPage:%d", currentPage);
-    [self.scroolView setContentOffset:CGPointMake(320*currentPage, 0) animated:YES];
-}
-
 
 /*
 #pragma mark - Navigation
@@ -83,9 +113,22 @@
 }
 */
 
+//滚动图片，调整对应的分页圆点
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSInteger pageIndex = scrollView.contentOffset.x/scrollView.frame.size.width;
     self.pageControl.currentPage = pageIndex;
+}
+
+//点击分页圆点，跳转到对应的图片
+- (void) pageSelected{
+    NSInteger currentPage = self.pageControl.currentPage;
+    NSLog(@"currentPage:%d", currentPage);
+    [self.scroolView setContentOffset:CGPointMake(320*currentPage, 0) animated:YES];
+}
+
+- (void)addToCart:(id)sender{
+    AddToCartViewController *addToCartViewController = [[AddToCartViewController alloc] init];
+    [self.navigationController pushViewController:addToCartViewController animated:YES];
 }
 
 @end

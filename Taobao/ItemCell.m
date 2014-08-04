@@ -31,6 +31,7 @@
         //添加人气
         self.hotLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.titleLabel.frame.origin.x, self.priceLabel.frame.origin.y+self.priceLabel.frame.size.height, 100, 30)];
         self.hotLabel.textColor = [UIColor darkGrayColor];
+        self.hotLabel.font = [UIFont systemFontOfSize:12];
         [self.contentView addSubview:self.hotLabel];
         //添加右箭头
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
