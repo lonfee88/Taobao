@@ -14,7 +14,6 @@
 		9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */; };
 		9B3E4136198B97E0006C0015 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E4135198B97E0006C0015 /* config@2x.png */; };
 		9B3E4139198D3775006C0015 /* MyFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4138198D3775006C0015 /* MyFavoriteViewController.m */; };
-		9B3E413C198D42A0006C0015 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E413B198D42A0006C0015 /* ItemModel.m */; };
 		9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E413D198D42B0006C0015 /* hezi11.jpg */; };
 		9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4140198D42DC006C0015 /* ItemCell.m */; };
 		9B4A7872198E812B00CC11C7 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */; };
@@ -60,8 +59,6 @@
 		9B3E4135198B97E0006C0015 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "config@2x.png"; sourceTree = "<group>"; };
 		9B3E4137198D3775006C0015 /* MyFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFavoriteViewController.h; sourceTree = "<group>"; };
 		9B3E4138198D3775006C0015 /* MyFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFavoriteViewController.m; sourceTree = "<group>"; };
-		9B3E413A198D42A0006C0015 /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
-		9B3E413B198D42A0006C0015 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
 		9B3E413D198D42B0006C0015 /* hezi11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi11.jpg; sourceTree = "<group>"; };
 		9B3E413F198D42DC006C0015 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		9B3E4140198D42DC006C0015 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
@@ -205,8 +202,6 @@
 				9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */,
 				9B8B36E0198F39C600F718FF /* AddToCartViewController.h */,
 				9B8B36E1198F39C600F718FF /* AddToCartViewController.m */,
-				9B3E413A198D42A0006C0015 /* ItemModel.h */,
-				9B3E413B198D42A0006C0015 /* ItemModel.m */,
 				9B3E413F198D42DC006C0015 /* ItemCell.h */,
 				9B3E4140198D42DC006C0015 /* ItemCell.m */,
 			);
@@ -348,7 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */,
-				9B3E413C198D42A0006C0015 /* ItemModel.m in Sources */,
 				9B4A7872198E812B00CC11C7 /* ItemDetailViewController.m in Sources */,
 				9BC86A6E198A645C001C24DE /* DiscoverViewController.m in Sources */,
 				9BC86A48198A634B001C24DE /* AppDelegate.m in Sources */,

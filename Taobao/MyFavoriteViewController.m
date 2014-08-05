@@ -8,7 +8,6 @@
 
 #import "MyFavoriteViewController.h"
 #import "ItemCell.h"
-#import "ItemModel.h"
 
 @interface MyFavoriteViewController ()
 

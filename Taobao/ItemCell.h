@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ItemModel.h"
 @interface ItemCell : UITableViewCell
 @property (nonatomic, strong) UIImageView *itemImageView;
 @property (nonatomic, strong) UILabel *titleLabel;

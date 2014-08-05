@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ItemModel.h"
 
 @interface ItemDetailViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) UIPageControl *pageControl;
