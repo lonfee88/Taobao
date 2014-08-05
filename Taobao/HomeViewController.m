@@ -28,6 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"首页";
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    NSURL *url = [NSURL URLWithString:@"http://m.taobao.com"];
+    NSURLRequest *request= [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
+    
+    [self.view addSubview:webView];
 }
 
 - (void)didReceiveMemoryWarning
