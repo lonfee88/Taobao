@@ -7,7 +7,7 @@
 //
 
 #import "AddToCartViewController.h"
-#import "MyFavoriteViewController.h"
+#import "CartViewController.h"
 
 @interface AddToCartViewController ()
 
@@ -47,7 +47,12 @@
 }
 
 - (void) goToCart:(id)sender{
-    [self.tabBarController setSelectedIndex:3];
+    //收藏页面跳转只购物车
+    if([self.tabBarController selectedIndex] != 3)
+        [self.tabBarController setSelectedIndex:3];
+    else{//购物车页面popTop
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
