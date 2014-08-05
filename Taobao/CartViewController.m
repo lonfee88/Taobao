@@ -44,6 +44,10 @@
     UIBarButtonItem *editBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editButtonClicked:)];
     [self.navigationItem setRightBarButtonItem:editBarButtonItem];
     
+    UIBarButtonItem *deleteAllBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"清空" style:UIBarButtonItemStylePlain target:self action:@selector(deleteAllButtonClicked:)];
+    [self.navigationItem setLeftBarButtonItem:deleteAllBarButtonItem];
+
+    
 }
 
 //进入退出编辑模式
@@ -57,6 +61,13 @@
         self.tableView.editing = YES;
     }
 }
+
+//清空
+-(void)deleteAllButtonClicked:(id)sender{
+    [self.dataArray removeAllObjects];
+    [self.tableView reloadData];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
