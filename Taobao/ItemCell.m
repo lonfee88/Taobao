@@ -42,7 +42,7 @@
     return self;
 }
 
-- (void)updateCellWithModel:(NSMutableDictionary *)itemDictionary{
+- (void)updateCellWithModel:(NSDictionary *)itemDictionary{
     self.itemImageView.image = [UIImage imageNamed:[itemDictionary objectForKey:@"imageName"]];
     self.hotLabel.text = [NSString stringWithFormat:@"人气 %@",  [itemDictionary objectForKey:@"hotText"]];
     self.titleLabel.text = [itemDictionary objectForKey:@"title"];

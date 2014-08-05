@@ -7,6 +7,7 @@
 //
 
 #import "AddToCartViewController.h"
+#import "MyFavoriteViewController.h"
 
 @interface AddToCartViewController ()
 

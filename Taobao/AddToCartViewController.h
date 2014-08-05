@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AddToCartViewController : UIViewController
-
+@property (strong, nonatomic) NSDictionary *itemDictionary;
 @end

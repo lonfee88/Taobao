@@ -14,5 +14,5 @@
 @property (nonatomic, strong) UILabel *priceLabel;
 @property (nonatomic, strong) UILabel *hotLabel;
 
-- (void)updateCellWithModel:(NSMutableDictionary *)itemDictionary;
+- (void)updateCellWithModel:(NSDictionary *)itemDictionary;
 @end

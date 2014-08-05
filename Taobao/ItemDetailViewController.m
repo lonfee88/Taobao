@@ -129,6 +129,7 @@
 //加入购物车
 - (void)addToCart:(id)sender{
     AddToCartViewController *addToCartViewController = [[AddToCartViewController alloc] init];
+    addToCartViewController.itemDictionary = self.itemDictionary;
     [self.navigationController pushViewController:addToCartViewController animated:YES];
 }
 

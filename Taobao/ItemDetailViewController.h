@@ -12,5 +12,5 @@
 @interface ItemDetailViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) UIPageControl *pageControl;
 @property (strong, nonatomic) UIScrollView *scroolView;
-@property (strong, nonatomic) NSMutableDictionary *itemDictionary;
+@property (strong, nonatomic) NSDictionary *itemDictionary;
 @end
