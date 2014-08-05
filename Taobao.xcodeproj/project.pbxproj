@@ -17,6 +17,7 @@
 		9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E413D198D42B0006C0015 /* hezi11.jpg */; };
 		9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4140198D42DC006C0015 /* ItemCell.m */; };
 		9B4A7872198E812B00CC11C7 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */; };
+		9B8A8B4A1990828D00590A2A /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A8B491990828D00590A2A /* ConfigViewController.m */; };
 		9B8B36E2198F39C600F718FF /* AddToCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B36E1198F39C600F718FF /* AddToCartViewController.m */; };
 		9B8F0943198E7ECE00D815AA /* hezi0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F0940198E7ECE00D815AA /* hezi0.jpg */; };
 		9B8F0944198E7ECE00D815AA /* hezi1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F0941198E7ECE00D815AA /* hezi1.jpg */; };
@@ -64,6 +65,8 @@
 		9B3E4140198D42DC006C0015 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		9B4A7870198E812B00CC11C7 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		9B4A7871198E812B00CC11C7 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		9B8A8B481990828D00590A2A /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		9B8A8B491990828D00590A2A /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		9B8B36E0198F39C600F718FF /* AddToCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartViewController.h; sourceTree = "<group>"; };
 		9B8B36E1198F39C600F718FF /* AddToCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartViewController.m; sourceTree = "<group>"; };
 		9B8F0940198E7ECE00D815AA /* hezi0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi0.jpg; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				9BC86A70198A6499001C24DE /* CartViewController.m */,
 				9BC86A76198A6AB5001C24DE /* AccountViewController.h */,
 				9BC86A77198A6AB5001C24DE /* AccountViewController.m */,
+				9B8A8B481990828D00590A2A /* ConfigViewController.h */,
+				9B8A8B491990828D00590A2A /* ConfigViewController.m */,
 				9B3E4137198D3775006C0015 /* MyFavoriteViewController.h */,
 				9B3E4138198D3775006C0015 /* MyFavoriteViewController.m */,
 				9B4A7870198E812B00CC11C7 /* ItemDetailViewController.h */,
@@ -352,6 +357,7 @@
 				9BC86A44198A634B001C24DE /* main.m in Sources */,
 				9BC86A6B198A6435001C24DE /* WeiViewController.m in Sources */,
 				9BC86A71198A6499001C24DE /* CartViewController.m in Sources */,
+				9B8A8B4A1990828D00590A2A /* ConfigViewController.m in Sources */,
 				9BC86A68198A641D001C24DE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "AccountViewController.h"
 #import "MyFavoriteViewController.h"
+#import "ConfigViewController.h"
 
 @interface AccountViewController ()
 
@@ -48,7 +49,10 @@
 
 //点击左边配置图标
 -(void)config:(id)sender{
-    
+    ConfigViewController *configViewController = [[ConfigViewController alloc] init];
+    [self.navigationController pushViewController:configViewController animated:YES];
+    UIBarButtonItem *backButton=[[UIBarButtonItem alloc] initWithTitle:@"回去" style:UIBarButtonItemStylePlain target:self action:nil];
+    [self.navigationItem setBackBarButtonItem:backButton];
 }
 
 //点击收藏按钮，跳转到收藏夹
