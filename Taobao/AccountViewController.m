@@ -7,7 +7,6 @@
 //
 
 #import "AccountViewController.h"
-#import "MyFavoriteViewController.h"
 #import "ConfigViewController.h"
 
 @interface AccountViewController ()
@@ -57,8 +56,7 @@
 
 //点击收藏按钮，跳转到收藏夹
 -(void)jumpToFavorite:(id)sender{
-    MyFavoriteViewController *myFavorite = [[MyFavoriteViewController alloc] init];
-    [self.navigationController pushViewController:myFavorite animated:YES];
+
 }
 
 

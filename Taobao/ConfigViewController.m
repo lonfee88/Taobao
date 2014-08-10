@@ -69,7 +69,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = [NSString stringWithFormat:@"this is cell (section=%d, row=%d)", indexPath.section, indexPath.row];
     
     if (indexPath.section == 0){
         if(indexPath.row == 0){

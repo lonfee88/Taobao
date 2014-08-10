@@ -37,9 +37,7 @@
     //添加数据源
     self.dataArray = [[NSMutableArray alloc] init];
     //载入1条数据
-    [self addData];
-    //最多可以载入10条数据
-    self.itemMaxCount = 10;
+    [self addData:3];
     //定制按钮
     UIBarButtonItem *editBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editButtonClicked:)];
     [self.navigationItem setRightBarButtonItem:editBarButtonItem];
@@ -68,12 +66,6 @@
     [self.tableView reloadData];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self addData];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -91,17 +83,17 @@
 }
 */
 
-- (void)addData{
-    int i = [self.dataArray count];
-    if (i < self.itemMaxCount) {
+- (void)addData:(NSInteger)count{
+    
+    for (NSInteger i = 0; i < count; i++) {
         NSString *imageName = @"hezi11.jpg";
         NSString *title = @"天猫魔盒TMB200F 高清电视网络机顶盒 wifi硬盘播放器 智能盒子1s";
         NSString *hotText = [NSString stringWithFormat:@"9%d", i];
         NSString *price = [NSString stringWithFormat:@"29%d.00", i];
         NSDictionary *itemDictionary = @{@"imageName":imageName, @"title":title, @"hotText":hotText, @"price":price};
         [self.dataArray addObject:itemDictionary];
-        [self.tableView reloadData];
     }
+     [self.tableView reloadData];
 }
 
 #pragma mark tableView
@@ -158,11 +150,12 @@
 //点击宝贝，进入宝贝详情
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    self.detailViewController = [[ItemDetailViewController alloc] init];
-    //把宝贝的标题、价格和人气传到detail页
-    NSDictionary *itemDictionary = [self.dataArray objectAtIndex:[indexPath row]];
-    self.detailViewController.itemDictionary = itemDictionary;
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+//    self.detailViewController = [[ItemDetailViewController alloc] init];
+//    //把宝贝的标题、价格和人气传到detail页
+//    NSDictionary *itemDictionary = [self.dataArray objectAtIndex:[indexPath row]];
+//    self.detailViewController.itemDictionary = itemDictionary;
+//    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    
 }
 
 @end

@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ItemDetailViewController.h"
 @interface CartViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
-@property (strong,retain ) ItemDetailViewController *detailViewController;
-@property NSInteger itemMaxCount;
 @end
