@@ -12,6 +12,7 @@
 		9B1DA4C5198A6E8600C3102D /* discover_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B6198A6E8600C3102D /* discover_on@2x.png */; };
 		9B1DA4C7198A6E8600C3102D /* home_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B8198A6E8600C3102D /* home_on@2x.png */; };
 		9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */; };
+		9B2DFF301997960C00DAA254 /* ItemWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2DFF2F1997960C00DAA254 /* ItemWebViewViewController.m */; };
 		9B3E4136198B97E0006C0015 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E4135198B97E0006C0015 /* config@2x.png */; };
 		9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E413D198D42B0006C0015 /* hezi11.jpg */; };
 		9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4140198D42DC006C0015 /* ItemCell.m */; };
@@ -54,6 +55,8 @@
 		9B1DA4B6198A6E8600C3102D /* discover_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discover_on@2x.png"; sourceTree = "<group>"; };
 		9B1DA4B8198A6E8600C3102D /* home_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_on@2x.png"; sourceTree = "<group>"; };
 		9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wei_on@2x.png"; sourceTree = "<group>"; };
+		9B2DFF2E1997960C00DAA254 /* ItemWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemWebViewViewController.h; sourceTree = "<group>"; };
+		9B2DFF2F1997960C00DAA254 /* ItemWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemWebViewViewController.m; sourceTree = "<group>"; };
 		9B3E4135198B97E0006C0015 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "config@2x.png"; sourceTree = "<group>"; };
 		9B3E413D198D42B0006C0015 /* hezi11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi11.jpg; sourceTree = "<group>"; };
 		9B3E413F198D42DC006C0015 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				9BC86A70198A6499001C24DE /* CartViewController.m */,
 				9BC86A76198A6AB5001C24DE /* AccountViewController.h */,
 				9BC86A77198A6AB5001C24DE /* AccountViewController.m */,
+				9B2DFF2E1997960C00DAA254 /* ItemWebViewViewController.h */,
+				9B2DFF2F1997960C00DAA254 /* ItemWebViewViewController.m */,
 				9B8A8B481990828D00590A2A /* ConfigViewController.h */,
 				9B8A8B491990828D00590A2A /* ConfigViewController.m */,
 				9B3E413F198D42DC006C0015 /* ItemCell.h */,
@@ -337,6 +342,7 @@
 				9BC86A48198A634B001C24DE /* AppDelegate.m in Sources */,
 				9BC86A78198A6AB5001C24DE /* AccountViewController.m in Sources */,
 				9BC86A44198A634B001C24DE /* main.m in Sources */,
+				9B2DFF301997960C00DAA254 /* ItemWebViewViewController.m in Sources */,
 				9BC86A6B198A6435001C24DE /* WeiViewController.m in Sources */,
 				9BC86A71198A6499001C24DE /* CartViewController.m in Sources */,
 				9B8A8B4A1990828D00590A2A /* ConfigViewController.m in Sources */,

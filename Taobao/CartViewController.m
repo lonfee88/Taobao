@@ -7,6 +7,7 @@
 //
 
 #import "CartViewController.h"
+#import "ItemWebViewViewController.h"
 #import "ItemCell.h"
 
 @interface CartViewController ()
@@ -103,8 +104,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];
-    //    cell = nil;
-    //    ItemCell *cell = nil;
     if(!cell){
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ItemCell"];
         
@@ -149,13 +148,11 @@
 
 //点击宝贝，进入宝贝详情
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ItemWebViewViewController *itemWebViewController = [[ItemWebViewViewController alloc] init];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://detail.m.tmall.com/item.htm?id=38938192695"]];
+    [itemWebViewController.webView loadRequest:request];
     
-//    self.detailViewController = [[ItemDetailViewController alloc] init];
-//    //把宝贝的标题、价格和人气传到detail页
-//    NSDictionary *itemDictionary = [self.dataArray objectAtIndex:[indexPath row]];
-//    self.detailViewController.itemDictionary = itemDictionary;
-//    [self.navigationController pushViewController:self.detailViewController animated:YES];
-    
+    [self.navigationController pushViewController:itemWebViewController animated:YES];
 }
 
 @end
