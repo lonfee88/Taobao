@@ -103,7 +103,7 @@
     
     cell.textLabel.text = name;
     cell.detailTextLabel.text = price;
-//    [cell.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     return cell;
 }
 
