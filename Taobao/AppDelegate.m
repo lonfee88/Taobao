@@ -44,7 +44,7 @@
     //发现
     DiscoverViewController *discoverViewController = [[DiscoverViewController alloc] init];
     UINavigationController *discoverNavController = [[UINavigationController alloc] initWithRootViewController:discoverViewController];
-    [discoverNavController.tabBarItem setTitle:@"微淘"];
+    [discoverNavController.tabBarItem setTitle:@"发现"];
     //设置图片
     [discoverNavController.tabBarItem setImage:[UIImage imageNamed:@"discover"]];
     //设置选中图片

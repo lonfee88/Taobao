@@ -13,6 +13,10 @@
 		9B1DA4C7198A6E8600C3102D /* home_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4B8198A6E8600C3102D /* home_on@2x.png */; };
 		9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */; };
 		9B2DFF301997960C00DAA254 /* ItemWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2DFF2F1997960C00DAA254 /* ItemWebViewViewController.m */; };
+		9B2DFF331997A7AB00DAA254 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2DFF321997A7AB00DAA254 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9B2DFF361997B26800DAA254 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2DFF341997B26800DAA254 /* placeholder.png */; };
+		9B2DFF371997B26800DAA254 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2DFF351997B26800DAA254 /* SDWebImage.framework */; };
+		9B2DFF391997B7BB00DAA254 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2DFF381997B7BB00DAA254 /* ImageIO.framework */; };
 		9B3E4136198B97E0006C0015 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E4135198B97E0006C0015 /* config@2x.png */; };
 		9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E413D198D42B0006C0015 /* hezi11.jpg */; };
 		9B3E4141198D42DC006C0015 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E4140198D42DC006C0015 /* ItemCell.m */; };
@@ -57,6 +61,13 @@
 		9B1DA4BA198A6E8600C3102D /* wei_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wei_on@2x.png"; sourceTree = "<group>"; };
 		9B2DFF2E1997960C00DAA254 /* ItemWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemWebViewViewController.h; sourceTree = "<group>"; };
 		9B2DFF2F1997960C00DAA254 /* ItemWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemWebViewViewController.m; sourceTree = "<group>"; };
+		9B2DFF311997A7AB00DAA254 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9B2DFF321997A7AB00DAA254 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		9B2DFF341997B26800DAA254 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		9B2DFF351997B26800DAA254 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		9B2DFF381997B7BB00DAA254 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9B2DFF3A1997B82300DAA254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9B2DFF3C1997B91A00DAA254 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SDWebImage; path = Taobao/SDWebImage.framework/SDWebImage; sourceTree = "<group>"; };
 		9B3E4135198B97E0006C0015 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "config@2x.png"; sourceTree = "<group>"; };
 		9B3E413D198D42B0006C0015 /* hezi11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hezi11.jpg; sourceTree = "<group>"; };
 		9B3E413F198D42DC006C0015 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
@@ -104,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2DFF391997B7BB00DAA254 /* ImageIO.framework in Frameworks */,
+				9B2DFF371997B26800DAA254 /* SDWebImage.framework in Frameworks */,
 				9BC86A3A198A634B001C24DE /* CoreGraphics.framework in Frameworks */,
 				9BC86A3C198A634B001C24DE /* UIKit.framework in Frameworks */,
 				9BC86A38198A634B001C24DE /* Foundation.framework in Frameworks */,
@@ -167,6 +180,9 @@
 		9BC86A36198A634B001C24DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B2DFF3C1997B91A00DAA254 /* SDWebImage */,
+				9B2DFF3A1997B82300DAA254 /* QuartzCore.framework */,
+				9B2DFF381997B7BB00DAA254 /* ImageIO.framework */,
 				9BC86A37198A634B001C24DE /* Foundation.framework */,
 				9BC86A39198A634B001C24DE /* CoreGraphics.framework */,
 				9BC86A3B198A634B001C24DE /* UIKit.framework */,
@@ -206,6 +222,10 @@
 		9BC86A3E198A634B001C24DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B2DFF341997B26800DAA254 /* placeholder.png */,
+				9B2DFF351997B26800DAA254 /* SDWebImage.framework */,
+				9B2DFF311997A7AB00DAA254 /* JSONKit.h */,
+				9B2DFF321997A7AB00DAA254 /* JSONKit.m */,
 				9BC86A3F198A634B001C24DE /* Taobao-Info.plist */,
 				9BC86A40198A634B001C24DE /* InfoPlist.strings */,
 				9BC86A43198A634B001C24DE /* main.m */,
@@ -310,6 +330,7 @@
 				9BC86A42198A634B001C24DE /* InfoPlist.strings in Resources */,
 				9B3E413E198D42B0006C0015 /* hezi11.jpg in Resources */,
 				9B1DA4C9198A6E8600C3102D /* wei_on@2x.png in Resources */,
+				9B2DFF361997B26800DAA254 /* placeholder.png in Resources */,
 				9B1DA4C5198A6E8600C3102D /* discover_on@2x.png in Resources */,
 				9B3E4136198B97E0006C0015 /* config@2x.png in Resources */,
 				9BC86A4A198A634B001C24DE /* Images.xcassets in Resources */,
@@ -347,6 +368,7 @@
 				9BC86A71198A6499001C24DE /* CartViewController.m in Sources */,
 				9B8A8B4A1990828D00590A2A /* ConfigViewController.m in Sources */,
 				9BC86A68198A641D001C24DE /* HomeViewController.m in Sources */,
+				9B2DFF331997A7AB00DAA254 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +444,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -453,6 +477,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -463,9 +489,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Taobao",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
 				INFOPLIST_FILE = "Taobao/Taobao-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Taobao/SDWebImage.framework",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,9 +511,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Taobao",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Taobao/Taobao-Prefix.pch";
 				INFOPLIST_FILE = "Taobao/Taobao-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Taobao/SDWebImage.framework",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
