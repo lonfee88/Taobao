@@ -7,11 +7,11 @@
 //
 
 #import "JSONKit.h"
+#import "AFNetworking.h"
 #import "DiscoverViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface DiscoverViewController () <NSURLConnectionDataDelegate>
-@property (nonatomic, strong) NSURLConnection *connection;
+@interface DiscoverViewController ()
 @property (nonatomic, strong) NSMutableData *data;
 @property (nonatomic, strong) NSArray *items;
 @end
@@ -36,10 +36,23 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    NSString *url = @"http://h5.waptest.taobao.com/json/wv/items.json";
     
-    NSURL *url = [NSURL URLWithString:@"http://h5.waptest.taobao.com/json/wv/items.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+    //使用AFNetworking发post请求
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //解析数据
+        self.items = [(NSDictionary *)responseObject objectForKey:@"items"];
+        //将数据显示在table中
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"请求错误"
+                                                     message:[NSString stringWithFormat:@"%@",error]
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
+    
 }
 
 
@@ -60,25 +73,25 @@
 }
 */
 
-#pragma mark - Connection data delegete
-//收到请求
-- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    self.data = [[NSMutableData alloc] init];
-}
-
-//收到数据【可能有多次】
-- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    [self.data appendData:data];
-}
-
-//完成加载
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    //    NSString *response = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    NSDictionary *responseDic = [self.data objectFromJSONData];
-    self.items = [responseDic objectForKey:@"items"];
-    [self.tableView reloadData];
-    NSLog(@"receive response:\n%@", responseDic);
-}
+//#pragma mark - Connection data delegete
+////收到请求
+//- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+//    self.data = [[NSMutableData alloc] init];
+//}
+//
+////收到数据【可能有多次】
+//- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+//    [self.data appendData:data];
+//}
+//
+////完成加载
+//- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+//    //    NSString *response = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+//    NSDictionary *responseDic = [self.data objectFromJSONData];
+//    self.items = [responseDic objectForKey:@"items"];
+//    [self.tableView reloadData];
+//    NSLog(@"receive response:\n%@", responseDic);
+//}
 
 
 #pragma mark - table
