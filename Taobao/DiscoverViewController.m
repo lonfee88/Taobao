@@ -32,11 +32,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"发现";
+    self.items = [[NSMutableArray alloc] init];
     
+    [self.items removeAllObjects];
+    [self requestForData];
+
     //PullToRefresh
     __weak DiscoverViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
-//        [weakSelf.items removeAllObjects];
+        [weakSelf.items removeAllObjects];
         [weakSelf requestForData];
         [weakSelf.tableView.pullToRefreshView stopAnimating];
     }];
@@ -50,13 +54,6 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    self.items = [[NSMutableArray alloc] init];
-    [self requestForData];
-}
-
 //发请求，重新载入数据
 - (void)requestForData{
     NSString *url = @"http://h5.waptest.taobao.com/json/wv/items.json";
@@ -64,7 +61,9 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //解析数据
+        NSLog(@"before %d", self.items.count);
         [self.items addObjectsFromArray:[NSMutableArray arrayWithArray:[(NSDictionary *)responseObject objectForKey:@"items"]]];
+        NSLog(@"after %d", self.items.count);
         //将数据显示在table中,一定要在这里调用一次
         [self.tableView reloadData];
         NSLog(@"request");
@@ -109,14 +108,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    NSDictionary *item = [self.items objectAtIndex:indexPath.row];
-    NSString *name = [item objectForKey:@"name"];
-    NSString *price = [item objectForKey:@"price"];
-    NSString *url = [item objectForKey:@"img"];
+    if(indexPath.row < self.items.count){
+        NSDictionary *item = [self.items objectAtIndex:indexPath.row];
+        NSString *name = [item objectForKey:@"name"];
+        NSString *price = [item objectForKey:@"price"];
+        NSString *url = [item objectForKey:@"img"];
     
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = price;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+        cell.textLabel.text = name;
+        cell.detailTextLabel.text = price;
+        [cell.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    }
+    else{
+        NSLog(@"不满足要求的情况%@", self.items);
+    }
     return cell;
 }
 
