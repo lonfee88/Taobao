@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <UIWebViewDelegate>
 
 @end
 
@@ -33,7 +33,7 @@
     NSURL *url = [NSURL URLWithString:@"http://m.taobao.com"];
     NSURLRequest *request= [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
-    
+    webView.delegate = self;
     [self.view addSubview:webView];
 }
 
@@ -41,6 +41,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - WebView
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"请求错误"
+                                                 message:@"请检查网络连接"
+                                                delegate:nil
+                                       cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    NSLog(@"webview load error:%@", error);
+    [av show];
+}
+
+//载入成功，修改title
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSString *title=[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    self.title = title;
 }
 
 /*

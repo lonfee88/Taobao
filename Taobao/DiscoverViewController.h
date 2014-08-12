@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DiscoverViewController : UITableViewController
-
+@property (nonatomic, strong) NSMutableArray *items;
 @end

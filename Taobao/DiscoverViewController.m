@@ -8,12 +8,12 @@
 
 #import "JSONKit.h"
 #import "AFNetworking.h"
+#import "SVPullToRefresh.h"
+#import "ItemWebViewController.h"
 #import "DiscoverViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DiscoverViewController ()
-@property (nonatomic, strong) NSMutableData *data;
-@property (nonatomic, strong) NSArray *items;
 @end
 
 @implementation DiscoverViewController
@@ -32,27 +32,49 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"发现";
+    
+    //PullToRefresh
+    __weak DiscoverViewController *weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+//        [weakSelf.items removeAllObjects];
+        [weakSelf requestForData];
+        [weakSelf.tableView.pullToRefreshView stopAnimating];
+    }];
+    
+    //InfiniteScroll
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        NSLog(@"addInfiniteScrollingWithActionHandler");
+        [weakSelf requestForData];
+        [weakSelf.tableView.infiniteScrollingView stopAnimating];
+    }];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSString *url = @"http://h5.waptest.taobao.com/json/wv/items.json";
     
+    self.items = [[NSMutableArray alloc] init];
+    [self requestForData];
+}
+
+//发请求，重新载入数据
+- (void)requestForData{
+    NSString *url = @"http://h5.waptest.taobao.com/json/wv/items.json";
     //使用AFNetworking发post请求
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //解析数据
-        self.items = [(NSDictionary *)responseObject objectForKey:@"items"];
-        //将数据显示在table中
+        [self.items addObjectsFromArray:[NSMutableArray arrayWithArray:[(NSDictionary *)responseObject objectForKey:@"items"]]];
+        //将数据显示在table中,一定要在这里调用一次
         [self.tableView reloadData];
+        NSLog(@"request");
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"请求错误"
-                                                     message:[NSString stringWithFormat:@"%@",error]
+                                                     message:@"请检查网络连接"
                                                     delegate:nil
                                            cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [av show];
     }];
-    
 }
 
 
@@ -73,28 +95,6 @@
 }
 */
 
-//#pragma mark - Connection data delegete
-////收到请求
-//- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-//    self.data = [[NSMutableData alloc] init];
-//}
-//
-////收到数据【可能有多次】
-//- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-//    [self.data appendData:data];
-//}
-//
-////完成加载
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-//    //    NSString *response = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-//    NSDictionary *responseDic = [self.data objectFromJSONData];
-//    self.items = [responseDic objectForKey:@"items"];
-//    [self.tableView reloadData];
-//    NSLog(@"receive response:\n%@", responseDic);
-//}
-
-
-#pragma mark - table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -118,6 +118,17 @@
     cell.detailTextLabel.text = price;
     [cell.imageView setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ItemWebViewController *web = [[ItemWebViewController alloc] init];
+    NSDictionary *item = [self.items objectAtIndexedSubscript:indexPath.row];
+    NSString *url = [item objectForKeyedSubscript:@"url"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    [web.webView loadRequest:request];
+    
+    [self.navigationController pushViewController:web animated:YES];
 }
 
 @end

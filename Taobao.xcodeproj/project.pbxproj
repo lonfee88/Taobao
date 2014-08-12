@@ -33,6 +33,9 @@
 		9B90E33D1998EB6900F88CEC /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3321998EB6900F88CEC /* AFURLRequestSerialization.m */; };
 		9B90E33E1998EB6900F88CEC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3341998EB6900F88CEC /* AFURLResponseSerialization.m */; };
 		9B90E33F1998EB6900F88CEC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3361998EB6900F88CEC /* AFURLSessionManager.m */; };
+		9B90E3421999BEA400F88CEC /* ItemWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3411999BEA400F88CEC /* ItemWebViewController.m */; };
+		9B90E3491999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3461999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.m */; };
+		9B90E34A1999C47600F88CEC /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B90E3481999C47600F88CEC /* UIScrollView+SVPullToRefresh.m */; };
 		9BC86A38198A634B001C24DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A37198A634B001C24DE /* Foundation.framework */; };
 		9BC86A3A198A634B001C24DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A39198A634B001C24DE /* CoreGraphics.framework */; };
 		9BC86A3C198A634B001C24DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC86A3B198A634B001C24DE /* UIKit.framework */; };
@@ -105,6 +108,13 @@
 		9B90E3341998EB6900F88CEC /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		9B90E3351998EB6900F88CEC /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		9B90E3361998EB6900F88CEC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		9B90E3401999BEA400F88CEC /* ItemWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemWebViewController.h; sourceTree = "<group>"; };
+		9B90E3411999BEA400F88CEC /* ItemWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemWebViewController.m; sourceTree = "<group>"; };
+		9B90E3441999C47600F88CEC /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		9B90E3451999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		9B90E3461999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		9B90E3471999C47600F88CEC /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		9B90E3481999C47600F88CEC /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		9BB1F274198A9A4B003D6434 /* account_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account_on@2x.png"; sourceTree = "<group>"; };
 		9BB1F275198A9A4B003D6434 /* cart_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_on@2x.png"; sourceTree = "<group>"; };
 		9BB1F276198A9A4B003D6434 /* discover_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discover_on@2x.png"; sourceTree = "<group>"; };
@@ -213,6 +223,18 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		9B90E3431999C47600F88CEC /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9B90E3441999C47600F88CEC /* SVPullToRefresh.h */,
+				9B90E3451999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.h */,
+				9B90E3461999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.m */,
+				9B90E3471999C47600F88CEC /* UIScrollView+SVPullToRefresh.h */,
+				9B90E3481999C47600F88CEC /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 		9BC86A2B198A634B001C24DE = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +282,8 @@
 				9BC86A6A198A6435001C24DE /* WeiViewController.m */,
 				9BC86A6C198A645C001C24DE /* DiscoverViewController.h */,
 				9BC86A6D198A645C001C24DE /* DiscoverViewController.m */,
+				9B90E3401999BEA400F88CEC /* ItemWebViewController.h */,
+				9B90E3411999BEA400F88CEC /* ItemWebViewController.m */,
 				9BC86A6F198A6499001C24DE /* CartViewController.h */,
 				9BC86A70198A6499001C24DE /* CartViewController.m */,
 				9BC86A76198A6AB5001C24DE /* AccountViewController.h */,
@@ -277,6 +301,7 @@
 		9BC86A3E198A634B001C24DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B90E3431999C47600F88CEC /* SVPullToRefresh */,
 				9B90E3231998EB6900F88CEC /* AFNetworking */,
 				9B2DFF351997B26800DAA254 /* SDWebImage.framework */,
 				9B2DFF311997A7AB00DAA254 /* JSONKit.h */,
@@ -424,11 +449,14 @@
 				9B90E33A1998EB6900F88CEC /* AFNetworkReachabilityManager.m in Sources */,
 				9B2DFF301997960C00DAA254 /* ItemWebViewViewController.m in Sources */,
 				9B90E33E1998EB6900F88CEC /* AFURLResponseSerialization.m in Sources */,
+				9B90E34A1999C47600F88CEC /* UIScrollView+SVPullToRefresh.m in Sources */,
 				9B90E33D1998EB6900F88CEC /* AFURLRequestSerialization.m in Sources */,
 				9B90E33C1998EB6900F88CEC /* AFURLConnectionOperation.m in Sources */,
 				9B90E3381998EB6900F88CEC /* AFHTTPRequestOperationManager.m in Sources */,
+				9B90E3491999C47600F88CEC /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				9BC86A6B198A6435001C24DE /* WeiViewController.m in Sources */,
 				9BC86A71198A6499001C24DE /* CartViewController.m in Sources */,
+				9B90E3421999BEA400F88CEC /* ItemWebViewController.m in Sources */,
 				9B90E33B1998EB6900F88CEC /* AFSecurityPolicy.m in Sources */,
 				9B8A8B4A1990828D00590A2A /* ConfigViewController.m in Sources */,
 				9BC86A68198A641D001C24DE /* HomeViewController.m in Sources */,
