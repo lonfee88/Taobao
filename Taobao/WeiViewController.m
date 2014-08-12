@@ -28,6 +28,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"微淘";
+    
+    UILabel *content = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width-200)/2, (self.view.frame.size.height-100)/2, 200, 100)];
+        content.text = @"本次作业主要在 发现 页面";
+    
+    UIButton *goToDiscover = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, content.frame.origin.y + content.frame.size.height, 100, 20)];
+    [goToDiscover setTitle:@"去发现" forState:UIControlStateNormal];
+    [goToDiscover setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [goToDiscover addTarget:self action:@selector(goToDiscover:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:content];
+    [self.view addSubview:goToDiscover];
+}
+
+- (void)goToDiscover:(id)sender{
+    [self.tabBarController setSelectedIndex:2];
 }
 
 - (void)didReceiveMemoryWarning

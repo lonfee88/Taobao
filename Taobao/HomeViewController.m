@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "TSMessage.h"
 
 @interface HomeViewController () <UIWebViewDelegate>
 
@@ -45,18 +46,25 @@
 
 #pragma mark - WebView
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"请求错误"
-                                                 message:@"请检查网络连接"
-                                                delegate:nil
-                                       cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    NSLog(@"webview load error:%@", error);
-    [av show];
+    //失败通知
+    //失败通知
+    [TSMessage showNotificationInViewController:self
+                                          title:@"错误"
+                                       subtitle:nil
+                                          image:nil
+                                           type:TSMessageNotificationTypeError
+                                       duration:1
+                                       callback:nil
+                                    buttonTitle:@""
+                                 buttonCallback:nil
+                                     atPosition:TSMessageNotificationPositionTop canBeDismissedByUser:YES];
 }
 
 //载入成功，修改title
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     NSString *title=[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    self.title = title;
+    self.navigationItem.title = title;
+    
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import "JSONKit.h"
+#import "TSMessage.h"
 #import "AFNetworking.h"
 #import "SVPullToRefresh.h"
 #import "ItemWebViewController.h"
@@ -64,15 +65,35 @@
         NSLog(@"before %d", self.items.count);
         [self.items addObjectsFromArray:[NSMutableArray arrayWithArray:[(NSDictionary *)responseObject objectForKey:@"items"]]];
         NSLog(@"after %d", self.items.count);
+        
+        //成功通知
+        [TSMessage showNotificationInViewController:self
+                                              title:@"成功"
+                                           subtitle:nil
+                                              image:nil
+                                               type:TSMessageNotificationTypeSuccess
+                                           duration:1
+                                           callback:nil
+                                        buttonTitle:@""
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionTop canBeDismissedByUser:YES];
+        
+        
         //将数据显示在table中,一定要在这里调用一次
         [self.tableView reloadData];
         NSLog(@"request");
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"请求错误"
-                                                     message:@"请检查网络连接"
-                                                    delegate:nil
-                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [av show];
+        //失败通知
+        [TSMessage showNotificationInViewController:self
+                                              title:@"错误"
+                                           subtitle:nil
+                                              image:nil
+                                               type:TSMessageNotificationTypeError
+                                           duration:1
+                                           callback:nil
+                                        buttonTitle:@""
+                                     buttonCallback:nil
+                                         atPosition:TSMessageNotificationPositionTop canBeDismissedByUser:YES];
     }];
 }
 

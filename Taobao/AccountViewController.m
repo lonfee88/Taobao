@@ -38,12 +38,10 @@
     [self.navigationItem setLeftBarButtonItem:configBarButtonItem];
     
     //添加收藏夹按钮
-    UIButton *button=[UIButton buttonWithType:UIButtonTypeSystem];
-    [button setFrame:CGRectMake((self.view.frame.size.width-200)/2, (self.view.frame.size.height-100)/2, 200, 100)];
-    [button setTitle:@"我的收藏夹" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(jumpToFavorite:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    UIImageView *profile = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 256)/2, (self.view.frame.size.height - 211)/2, 256, 211)];
+    profile.image = [UIImage imageNamed:@"profile.jpg"];
     
+    [self.view addSubview:profile];
 }
 
 //点击左边配置图标
@@ -53,12 +51,6 @@
     UIBarButtonItem *backButton=[[UIBarButtonItem alloc] initWithTitle:@"回去" style:UIBarButtonItemStylePlain target:self action:nil];
     [self.navigationItem setBackBarButtonItem:backButton];
 }
-
-//点击收藏按钮，跳转到收藏夹
--(void)jumpToFavorite:(id)sender{
-
-}
-
 
 - (void)didReceiveMemoryWarning
 {
